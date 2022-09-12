@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+$color1:#163D82;
+$color2:#B52011;
+$color3:#FFFFFF;
+$color4:#000000;
+$color5:#F9F9F9;
+
+
+$fontSize:64px;
+
+$fonSizeList:(
+    "h1":$fontSize,
+    "h2":($fontSize)-28px,
+    "h3":($fontSize)-40px,
+    "h4":($fontSize)-44px,
+    "h5":($fontSize)-46px,
+    "h6":($fontSize)-46px,
+    "p":($fontSize)-46px,
+    "span":($fontSize)-46px,
+    "a":($fontSize)-40px,
+
+);
+
+@each $key,$val in $fonSizeList{
+    #{$key}{
+        font-size: $val;
+    }
+}
+
+$funColor:(
+    "h1":$color4,
+    "h2":$color4,
+    "h3":$color4,
+    "h4":$color4,
+    "h5":$color4,
+    "h6":$color4,
+    "p":$color4,
+    "span":$color4,
+);
+
+@each $key,$val in $funColor{
+    #{$key}{
+        color: $val;
+    }
+}
+
+
+@mixin grid($val ,$d:null){
+    @for $i from 1 through $val {
+      .col#{$d}-#{$i} {
+        width: $i / $val *100%;
+      }
+    }
+  }
+  
+  @include grid(12);
+
+

@@ -1,0 +1,68 @@
+@import "../base/base";
+
+@mixin btnLarge() {//大顆按鈕
+    width: 200px;
+    border-radius: 100px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: $color1;
+    color: aliceblue;
+    transform: rotateX(20deg);
+    border: none;
+    z-index: 10;
+}
+
+
+@mixin btnLittle() {//小顆按鈕
+    width: 120px;
+    border-radius: 100px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: $color1;
+    color: aliceblue;
+    transform: rotateX(20deg);
+    border: none;
+    position: relative;
+    z-index: 10;
+}
+
+
+@mixin url(){
+    text-decoration: none;
+    display: block;
+    color: $color1;
+    margin: 10px;
+    font-weight: 800;
+}
+
+@mixin title() {//標題
+   
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #163D82;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 27px;
+        font-weight: 900;
+        color: aliceblue;
+        font-family:serif,sans-serif,cursive,fantasy,monospace;
+ 
+}
+
+@mixin titleBefore {//標題before
+        content: "";
+        width: 42px;
+        height: 42px;
+        background-color: transparent;
+        border: 3px solid aliceblue;
+        position: absolute;
+        top: .5px;
+        left: 2.5%;
+        border-radius: 50%;
+ 
+}

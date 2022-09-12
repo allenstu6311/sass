@@ -1,0 +1,73 @@
+@import"../base/base";
+@import"../media/media";
+
+@mixin header() {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 0px 10px rgb(192, 191, 191);
+    z-index: 10;
+    background-color:$color3;
+
+}
+
+
+@media screen and (max-width:$cellPhone) {
+   
+    
+    .header{
+        position: relative;
+        justify-content: flex-end;
+        .show{
+            position: absolute;
+            left:0 !important;
+        }
+
+        ul{
+            width: 300px;
+            height: 100vh;
+            position: absolute;
+            left: -100%;
+            top: 100%;
+            flex-direction: column;
+            background-color: $color3;
+            transition: .5s;
+        }
+     
+        .wrap{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .thing{
+
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0;
+        }
+        .box{
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: $color1;
+            box-shadow: 0px 10px 0px $color1,
+                        0px -10px 0px $color1
+            
+        }
+        .max{
+            display: block !important;
+        }
+        .little{
+            display: none !important;
+        }
+    }
+
+
+}
+
+
+
